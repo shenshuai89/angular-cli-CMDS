@@ -1,0 +1,9 @@
+<!--The whole content below can be removed with the new code.-->
+<div style="text-align:center">
+  <h1 highlight>
+    Welcome to {{title}}!!
+  </h1>
+  <app-child [message]="msgToChild" (outer)="receive($event)"></app-child>
+  <b>从子组件获得的消息：{{ msgFromChild || '暂无' }}</b>
+</div>
+
