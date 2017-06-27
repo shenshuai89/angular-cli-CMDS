@@ -1,4 +1,8 @@
-# Third
+# angular2 cli
+## 自定义组件，并且完成父子组件的数据传递
+## 自定义服务，完成控制台输出
+## 自定义属性指令，改变dom样式
+## 自定义管道，对数据进行处理
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.2.
 
