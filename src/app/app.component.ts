@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import {LoggerService} from "./logger.service";
+import {Component, OnInit} from '@angular/core';
+import {LoggerService} from "./shared/logger.service";
 
 @Component({
   selector: 'app-root',
@@ -7,20 +7,20 @@ import {LoggerService} from "./logger.service";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit{
-  private title:string;
-  private msgToChild:string;
-  private msgFromChild:string;
+  title = 'app';
+  private toChild:string = "message from parent to child";
+  private fromChildMessage:string;
+  private count:number;
 
-
-  constructor(private logger:LoggerService){  }
-
-  ngOnInit() {
-    this.msgToChild = 'message from parent'
-    this.title = 'angular 2'
-    this.logger.debug("loggerService服务初始化完成")
+  constructor(private logger:LoggerService){
   }
 
-  receive (msg: string){
-    this.msgFromChild = msg;
+  ngOnInit(){
+    this.logger.debug("这是父组件上的服务应用")
+    this.count = 8
+  }
+
+  receivedMessage(msg:string){
+    this.fromChildMessage = msg
   }
 }

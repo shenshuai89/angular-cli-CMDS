@@ -1,10 +1,10 @@
-import { MyAppPage } from './app.po';
+import { ThirdPage } from './app.po';
 
-describe('my-app App', () => {
-  let page: MyAppPage;
+describe('third App', () => {
+  let page: ThirdPage;
 
   beforeEach(() => {
-    page = new MyAppPage();
+    page = new ThirdPage();
   });
 
   it('should display welcome message', () => {
